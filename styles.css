@@ -1,8 +1,8 @@
 body {
     background-color: #313e23;
     font-family: "Overlock", serif;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .container-main {
@@ -28,42 +28,66 @@ p {
     max-width: 700px;
 }
 
-.navbar {
-    font-family: "Overlock SC", serif;
+header .navbar{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    overflow: hidden;
     background-color: #313e23;
     width: 90%;
-    color: white;
     opacity: 0.8;
-    padding: 15px;
-    margin-left: 5%;
     margin-right: 5%;
+    margin-left: 5%;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
 }
 
-.navbar-nav .nav-item {
-    margin-right: 30px;
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+
 }
 
-.navbar-brand {
-    margin-left: 30px;
-}
-
-.navbar-nav .nav-link {
+.navbar-nav a {
+    font-family: "Overlock", serif;
     color: white;
-    font-size: 22px;
-    padding: 10px 15px;
+    font-size: 26px;
     text-transform: capitalize;
-    transition: background-color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin-right: 50px;
+    gap: 20px;
+}
+
+.navbar-brand img {
+    margin-left: 30px;
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    border-radius: 20px;
+}
+
+.navbar-brand img:hover  {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+
+.navbar-logos a:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
 }
 
 .header-image {
@@ -72,10 +96,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
 .footer {
@@ -97,9 +117,12 @@ p {
     margin: 0 auto;
 }
 
-.footer .row div {
-    flex: 1;
-    text-align: center;
+.footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .footer img {
@@ -119,16 +142,52 @@ p {
 }
 
 @media (max-width: 768px) {
+
+    header .navbar {
+        background-color: transparent;
+        font-family: "Overlock SC", serif;
+        color: white;
+        padding: 0;
+        margin-left: 2%;
+        margin-right: 2%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
     .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        horiz-align: left;
+    }
+
+    .navbar-nav a {
+        font-size: 14px;
+    }
+
+    .navbar-logos {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
-    .navbar-nav .nav-item {
-        margin: 10px 0;
+    .navbar-logos img {
+        height: 20px;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 0;
+        gap: 10px;
     }
 
-    .footer .row {
+    .navbar-brand img {
+        display: none;
+        margin-left: 0;
+        height: 0;
+        width: auto;
+    }
+
+    .footer, .row {
         flex-direction: column;
         text-align: center;
     }
