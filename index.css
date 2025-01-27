@@ -1,0 +1,354 @@
+body {
+    background-color: #313e23;
+    font-family: "Overlock", serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0;
+}
+
+.container-main {
+    margin-top: 100px;
+    background-color: #40492d;
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    max-width: 90%;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Overlock SC", serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+header .navbar{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    overflow: hidden;
+    background-color: #313e23;
+    width: 90%;
+    opacity: 0.8;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+
+}
+
+.navbar-nav a {
+    font-family: "Overlock", serif;
+    color: white;
+    font-size: 26px;
+    text-transform: capitalize;
+}
+
+.navbar-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin-right: 50px;
+    gap: 20px;
+}
+
+.navbar-brand img {
+    margin-left: 30px;
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.navbar-brand img:hover  {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+
+.navbar-logos a:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+
+
+.header-image {
+    background-image: url("kuvat/Herokuva.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logotausta {
+    background-image: url(kuvat/logonTausta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 25%;
+    width: 435px;
+    height: 417px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logo {
+    background-image: url(kuvat/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 25%;
+    width: 453px;
+    height: 425px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    top: calc(50% - 12px);
+    left: calc(50% - 1.5px);
+}
+
+.icons {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+.icons img {
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 130px;
+}
+
+.cards .col-md-4 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+.cards .col-md-4 img {
+    width: 75%;
+    border-radius: 50px;
+    border: 1.5px solid #dda15e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.cards .col-md-4:hover img {
+    filter: blur(1px);
+    transform: scale(1.02)
+}
+
+.cards .col-md-4 .rectangle {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dda15e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Overlock SC', serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center; 
+    color: rgb(59, 59, 59);
+    z-index: 2;
+    bottom: 30px;
+}
+
+.cards .col-md-4 a {
+    text-decoration: none;
+    display: block;
+}
+
+.footer {
+    background-color: #40492d;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer .row div {
+    flex: 1;
+    text-align: center;
+}
+
+.footer img {
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer img:hover {
+    transform: scale(1.1);
+}
+
+.line {
+    margin: 10px auto;
+    border: 0;
+    border-top: 1px solid white;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+
+    .header-image {
+        height: 300px;
+    }
+
+    header .navbar {
+        background-color: transparent;
+        font-family: "Overlock SC", serif;
+        color: white;
+        padding: 0;
+        margin-left: 2%;
+        margin-right: 2%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+    }
+
+    .navbar-nav a {
+        font-size: 14px;
+    }
+
+    .navbar-logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navbar-logos img {
+        height: 20px;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 0;
+        gap: 10px;
+    }
+
+    .navbar-brand img {
+        display: none;
+        margin-left: 0;
+        height: 0;
+        width: auto;
+    }
+
+    .footer, .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        background-image: none;
+    }
+
+    .logotausta {
+        background-image: none;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cards .col-md-4 {
+        flex: 0 0 auto;
+        width: 85%;
+        scroll-snap-align: center;
+        margin-bottom: 30px;
+    }
+
+    .cards .col-md-4 img {
+        width: 100%;
+    }
+    .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center ;
+        gap: 20px;
+    }
+
+    .icons .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    .icons img {
+        width: 30%;
+    }
+
+    .icons p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    
+}
