@@ -1,0 +1,139 @@
+.product-container {
+    margin-top: 100px;
+    background-color: #40492d;
+    color: white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 40px 20px;
+    max-width: 90%;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-details h2 {
+    font-family: 'Overlock SC', serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.price {
+    font-size: 28px;
+    color: #DDA15E;
+    margin-bottom: 30px;
+    font-family: 'Overlock', sans-serif;
+}
+
+.product-description {
+    font-family: 'Overlock', sans-serif;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 0; 
+    padding-right: 0;
+}
+p{
+    margin: inherit;
+}
+
+.product-info {
+    margin-bottom: 40px;
+}
+
+.product-info h3 {
+    font-family: 'Overlock SC', serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #DDA15E;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    font-family: 'Overlock', sans-serif;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.add-to-cart-btn {
+    background-color: #DDA15E;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-family: 'Overlock SC', serif;
+    font-size: 19px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #bc8544;
+}
+
+.zoom-container {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto; 
+    border-radius: 8px;
+    width: 75%;
+}
+
+.zoom-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-out;
+    cursor: zoom-in;
+    transform-origin: 0 0;
+    border: 1px solid #DDA15E;
+}
+
+.zoom-container:hover .zoom-image {
+    transform: scale(1.1);
+}
+
+/* Responsiiviset tyylit */
+
+@media (max-width: 768px) {
+    .product-container {
+        margin-top: 80px;
+        padding: 20px 10px;
+    }
+
+    .product-details {
+        padding: 20px 15px;
+    }
+
+    .product-details h2 {
+        font-size: 32px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .product-description {
+        font-size: 16px;
+    }
+
+    .add-to-cart-btn {
+        padding: 12px 30px;
+        font-size: 17px;
+    }
+    .zoom-container {
+        width: 80%;
+        margin: 10px;
+    }
+    
+    .zoom-container:hover .zoom-image {
+        transform: scale(1);
+    }
+
+}
