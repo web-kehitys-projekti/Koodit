@@ -130,10 +130,16 @@ p{
     .zoom-container {
         width: 80%;
         margin: 10px;
+        position: inherit;
+        margin: 10px auto;
     }
     
     .zoom-container:hover .zoom-image {
         transform: scale(1);
     }
 
+    .zoom-image {
+        display: block;
+        margin: 0 auto;
+    }
 }
